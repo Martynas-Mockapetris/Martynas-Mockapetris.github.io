@@ -1,0 +1,12 @@
+footer(style="background-image:url(assets/img/Header/{{ site.data.content.headerimg }});")
+	div.lockup
+		div.logo {% include icons/logo.html %}
+
+		div.content-wrap
+			nav
+				a(href="#top") Back to Top
+				| {% for item in site.data.content.menu %}
+				a(href="{{ item.url }}") {{ item.name }}
+				| {% endfor %}
+
+			p.copyright All content copyright 2015 &copy; Martynas Mockapetris

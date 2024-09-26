@@ -1,0 +1,27 @@
+section.alt-section.section-work
+
+	h3#work My Projects and experiments
+
+	div.work-belt
+
+		div.thumb-wrap
+			
+			div.thumb-container
+
+				| {% for project in site.data.content.projects %}
+				a.thumb-unit(href="#/" style="background-image:url(assets/img/Gallery/{{ project.folder }}/thumb.jpg);")
+					div.thumb-overlay(data-folder="{{ project.folder }}")
+						strong {{ project.name }}
+
+				| {% endfor %}
+
+		div.work-wrap
+
+			div.work-container
+			
+				div.return {% include icons/back-btn.html %}
+
+				h4.project-title
+				div.project-load
+
+				div.go-up {% include icons/go-up-btn.html %}

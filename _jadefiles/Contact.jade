@@ -1,0 +1,21 @@
+section
+
+	h3 Let's work together!
+
+	form(action="http://formspree.io/{{ site.data.content.email }}" method="POST").form
+
+		div.contact-info
+			div.input-group
+				input(type="text" name="Sender" required)
+				label.name your name
+
+			div.input-group
+				input(type="email" name="Reply To" required)
+				label.email your e-mail
+
+		div.input-group
+			textarea(type="message" name="Message" required)
+			label.comment comments
+
+		div.submit-align
+			input(type="submit" value="send")

@@ -1,0 +1,18 @@
+div.sticky
+	div.container
+		nav.fixed
+			| {% for item in site.data.content.menu %}
+			a(href="{{ item.url }}") {{ item.name }}
+			| {% endfor %}
+		
+header#top(style="background-image:  url(assets/img/Header/{{ site.data.content.headerimg }});")
+	div.logo {% include icons/logo.html %}
+
+	nav
+		| {% for item in site.data.content.menu %}
+		a(href="{{ item.url }}") {{ item.name }}
+		| {% endfor %}
+
+	h1
+		span {{ site.data.content.sitetitle }}
+	p.kicker {{ site.data.content.kicker }}

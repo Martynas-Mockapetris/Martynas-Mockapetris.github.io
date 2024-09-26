@@ -1,0 +1,25 @@
+
+<section class="testimonials">
+  <h3 id="clients">What do others think about me?</h3>
+  <div class="person-mobile-nav">
+    {% for i in (1..4) %}
+    <span></span>
+    {% endfor %}
+  </div>
+  <div class="testimonials-belt">{% for person in site.data.content.people %}
+    <div class="person-unit">
+      <div class="person-face"><img src="assets/img/Testimonials/{{ person.avatar }}" alt="face"/><strong class="person-name">{{ person.name }}</strong>
+        <p class="person-title">{{ person.title }}</p>
+      </div>
+      <div class="person-content">
+        <div class="quote-mark">{% include icons/quote.html %}</div>{{ person.quote }}
+        <div class="end-quote-mark">{% include icons/quote.html %}</div>
+      </div>
+    </div>{% endfor %}
+  </div>
+  <div class="person-navigation">
+    <div class="person-control-next">{% include icons/next.html %}</div>
+    <div class="person-control-prev">{% include icons/prev.html %}</div>
+  </div>
+  <div class="person-logos">{% for person in site.data.content.people %}<img src="assets/img/Testimonials/{{ person.logo }}" alt="logo" class="logos"/>{% endfor %}</div>
+</section>

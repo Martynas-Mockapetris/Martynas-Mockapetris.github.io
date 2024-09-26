@@ -1,0 +1,18 @@
+
+<section class="alt-section section-work">
+  <h3 id="work">My Projects and experiments</h3>
+  <div class="work-belt">
+    <div class="thumb-wrap">
+      <div class="thumb-container">{% for project in site.data.content.projects %}<a href="#/" style="background-image:url(assets/img/Gallery/{{ project.folder }}/thumb.jpg);" class="thumb-unit">
+          <div data-folder="{{ project.folder }}" class="thumb-overlay"><strong>{{ project.name }}</strong></div></a>{% endfor %}</div>
+    </div>
+    <div class="work-wrap">
+      <div class="work-container">
+        <div class="return">{% include icons/back-btn.html %}</div>
+        <h4 class="project-title"></h4>
+        <div class="project-load"></div>
+        <div class="go-up">{% include icons/go-up-btn.html %}</div>
+      </div>
+    </div>
+  </div>
+</section>

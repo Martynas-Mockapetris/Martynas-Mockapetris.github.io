@@ -1,0 +1,31 @@
+section.testimonials
+	h3#clients What do others think about me?
+
+	div.person-mobile-nav
+		| {% for i in (1..4) %}
+		<span></span>
+		| {% endfor %}
+
+	div.testimonials-belt
+
+		| {% for person in site.data.content.people %}
+		div.person-unit
+			div.person-face
+				img(src="assets/img/Testimonials/{{ person.avatar }}", alt="face")
+				strong.person-name {{ person.name }}
+				p.person-title {{ person.title }}
+
+			div.person-content
+				div.quote-mark {% include icons/quote.html %}
+				| {{ person.quote }}
+				div.end-quote-mark {% include icons/quote.html %}
+		| {% endfor %}
+
+	div.person-navigation
+		div.person-control-next {% include icons/next.html %}
+		div.person-control-prev {% include icons/prev.html %}
+
+	div.person-logos
+		| {% for person in site.data.content.people %}
+		img.logos(src="assets/img/Testimonials/{{ person.logo }}", alt="logo")
+		| {% endfor %}

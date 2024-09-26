@@ -1,0 +1,12 @@
+
+<div class="sticky">
+  <div class="container">
+    <nav class="fixed">{% for item in site.data.content.menu %}<a href="{{ item.url }}">{{ item.name }}</a>{% endfor %}</nav>
+  </div>
+</div>
+<header id="top" style="background-image:  url(assets/img/Header/{{ site.data.content.headerimg }});">
+  <div class="logo">{% include icons/logo.html %}</div>
+  <nav>{% for item in site.data.content.menu %}<a href="{{ item.url }}">{{ item.name }}</a>{% endfor %}</nav>
+  <h1><span>{{ site.data.content.sitetitle }}</span></h1>
+  <p class="kicker">{{ site.data.content.kicker }}</p>
+</header>

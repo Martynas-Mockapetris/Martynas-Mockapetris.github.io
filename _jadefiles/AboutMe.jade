@@ -1,0 +1,28 @@
+section
+	h3#about-me Something about me
+
+	div.face-lockup
+		div.face-img(style="background-image: url(assets/img/AboutMeIcons/{{site.data.content.avatar}})")
+
+		div.icon-pencil {% include icons/pen.html %}
+		div.icon-organize {% include icons/organize.html %}
+		div.icon-web {% include icons/web.html %}
+		div.icon-travel {% include icons/plane.html %}
+
+	div.blurb {{ site.data.content.blurb }}
+
+	| {% if site.data.content.skills %}
+	
+	div.skill-lockup 
+		| {% for skill in site.data.content.skills %}
+
+		div.skill-unit
+			div.skill-label {{skill.name}}
+			div(class="skill-{{skill.value}}").skill-icon
+				| {% for i in (1..10) %}
+				<span></span>
+				| {% endfor %}
+
+		| {% endfor %}
+
+	| {% endif %}

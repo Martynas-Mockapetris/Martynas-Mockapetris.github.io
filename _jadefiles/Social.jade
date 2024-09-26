@@ -1,0 +1,16 @@
+section.alt-section.section-contact
+
+	h3#contact Contact me on
+
+	div.social-links
+		a(href="{{ site.data.content.facebook }}").icon-facebook
+		a(href="{{ site.data.content.googlep }}").icon-google-plus
+		a(href="{{ site.data.content.linkedin }}")
+			span.icon-linkedin
+		a(href="#/" title="{{ site.data.content.skype }}").no-link
+			span.icon-skype
+		a(href="{{ site.data.content.github }}").icon-git
+
+	hr.bar
+
+	a(href="mailto:{{ site.data.content.email }}").big-link {{ site.data.content.email }}

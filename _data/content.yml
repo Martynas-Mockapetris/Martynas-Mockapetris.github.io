@@ -1,0 +1,77 @@
+#----------------------------------------------------------------------#Site Settings
+tabtitle: Martynas Mockapetris
+sitetitle: Portfolio
+kicker: Build // Design // Program
+email: kestasmm@gmail.com
+
+#----------------------------------------------------------------------
+#Search Engine Optimization
+seo:
+- description: 'Martynas Mockapetris portfolio, web developer, programer, designer, work gallery with contact form if any job offers inquires'
+- author: 'https://www.facebook.com/mockapetris.martynas'
+
+#----------------------------------------------------------------------
+# Google Analytics Section
+
+# Analytics helps you understand who visits your website.
+# Learn more at: http://support.google.com/analytics/answer/1008065
+
+# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
+
+#google-analytics-ua: UA-XXXXXX-X
+
+#Header Background Image
+#----------------------------------------------------------------------
+headerimg: 'headerbg3.jpg'
+
+#----------------------------------------------------------------------
+#Navigation
+menu: 
+- {name: About Me, url: '#about-me'}
+- {name: Work, url: '#work'}
+- {name: Testimonials, url: '#clients'}
+- {name: Contact, url: '#contact'}
+
+#----------------------------------------------------------------------
+#About Me Section
+avatar: 'head.png'  
+
+blurb: <p><strong>Martynas specializes in making web design solutions.</strong> His stubborn approach to learn and experiment with the code helped him to turn work into enjoyable life experience. Meeting and working with new people, understanding their approach to life inspires him to reach his own goals. He manages to turn his weaknesses into motivation that leads him to become better human being than he was yesterday. On his free time he enjoys spending time with friends, but mostly he enjoys to travel searching for inspiration to his projects.</p>
+
+#----------------------------------------------------------------------
+#About Me Skill Section
+skills:
+- {name: Planing, value: '9'}
+- {name: Communication, value: '8'}
+- {name: Learning, value: '10'}
+- {name: Design, value: '9'}
+- {name: Organization, value: '8'}
+- {name: Creativity, value: '7'}
+- {name: Programming, value: '8'}
+- {name: Flexibility, value: '10'}
+
+#----------------------------------------------------------------------
+#Project Section
+projects:
+- {name: Project - Eurotech, folder: 'work-1'}
+- {name: Very first project, folder: 'work-2'}
+- {name: Parallax<br> on the web, folder: 'work-3'}
+- {name: Urban style, folder: 'work-4'}
+- {name: Still<br> in progress, folder: 'work-5'}
+- {name: My Portfolio<br> Proudest creation, folder: 'work-6'}
+
+#----------------------------------------------------------------------
+#Testimonials Section
+people:
+- {avatar: 'DianaF.jpg', name: 'Diana Faur', title: 'Copenhagen Business Academy', quote: '<p><strong>I know Martynas as a reliable and trustworthy person who takes pride in being able to solve problems and enjoys challenging work.</strong> He has a big interest in helping people and self-developing which is a valuable asset to have as a friend or colleague. His drive and dedication will help him to succeed in life and achieve his goals.</p>', logo: 'CBS.png'}
+- {avatar: 'GermanS.jpg', name: 'German Skripnicenko', title: 'Bachelor of Mediology', quote: '<p><strong>His proficient problem solving skills together with fast learning pace and ability to rapidly find solutions have made a great impact on project development that Martynas helped me with.</strong> Considering his competence level, in future I am hoping to have one more opportunity to collaborate with such a professional, who also happens to be a great human being.</p>', logo: 'AAU.png'}
+- {avatar: 'LaimaP.jpg', name: 'Laima Purickaite', title: 'Store Head Manager at Scalini', quote: '<p><strong>He has a bold approach to life, is not afraid of innovation and all the difficulties he ables to control with a serious approach and youthful enthusiasm.</strong> Communication with the other people he keeps in a peculiar way, which set him apart from the rest. All in all, he is a good person, a good friend and a good partner.</p>', logo: 'VivaBatai.png'}
+- {avatar: 'PremK.jpg', name: 'PremKrishnan Raghupathi', title: 'PhD in Microbiology', quote: '<p>I have known Martynas for three years and it has been an absolute pleasure and privilege knowing him. He has always been a brilliant computer technician and student, he stands out in his humility and the "queer" ability to manage people by saying the right thing at the right time.<strong> His ability to smile and get everyone to give off their best in the most strenuous of times is something I have always admired and aspired to be.<strong></p>', logo: 'CPHU.png'}
+
+#----------------------------------------------------------------------
+#Social Media Links
+facebook: 'https://www.facebook.com/mockapetris.martynas'
+googlep: 'https://www.google.com/+MartisM92'
+linkedin: 'https://dk.linkedin.com/pub/martynas-mockapetris/b4/6bb/4b8'
+skype: 'My skype: martynas5511'
+github: 'https://github.com/MartisM'

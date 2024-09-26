@@ -1,0 +1,23 @@
+
+<section>
+  <h3>Let's work together!</h3>
+  <form action="http://formspree.io/{{ site.data.content.email }}" method="POST" class="form">
+    <div class="contact-info">
+      <div class="input-group">
+        <input type="text" name="Sender" required="required"/>
+        <label class="name">your name</label>
+      </div>
+      <div class="input-group">
+        <input type="email" name="Reply To" required="required"/>
+        <label class="email">your e-mail</label>
+      </div>
+    </div>
+    <div class="input-group">
+      <textarea type="message" name="Message" required="required"></textarea>
+      <label class="comment">comments</label>
+    </div>
+    <div class="submit-align">
+      <input type="submit" value="send"/>
+    </div>
+  </form>
+</section>
