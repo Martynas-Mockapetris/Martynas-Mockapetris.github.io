@@ -1,0 +1,163 @@
+.testimonials
+	position: relative
+
+.testimonials-belt
+	width: 100%
+	position: relative
+
+	.person-unit
+		max-width: 750px
+		margin: 20px auto 50px
+		position: relative
+		display: none
+		@extend %animation
+
+		&.active-person
+			+display(flex)
+
+		.person-face
+			min-width: 250px
+			text-align: center
+
+			img
+				max-width: 100px
+				border-radius: 50%
+		
+			.person-name
+				display: block
+				text-transform: uppercase
+				font-weight: 400
+				letter-spacing: 1px
+				color: #000
+
+			.person-title
+				font-style: normal
+				font-size: 12px
+				color: #999
+				line-height: 15px
+
+		.person-content
+			font-size: 18px
+			line-height: 36px
+			font-weight: 300
+			margin-top: -10px
+			position: relative
+			color: $pcolor
+			z-index: 1
+
+.person-logos
+	position: relative
+	z-index: 3
+	max-width: 750px
+	margin: 50px auto 0px
+	+display(flex)
+	+align-items(flex-end)
+	+justify-content(space-around)
+
+	.logos
+		cursor: pointer
+		margin: 0 20px
+		padding-bottom: 10px
+		border-bottom: 4px solid transparent 
+		opacity: 0.5
+
+		&.active-person
+			border-bottom: 4px solid $accent
+			opacity: 0.8
+
+.quote-mark
+	+position(absolute, -12px null null -7px)
+	+size(40px)
+	z-index: -1
+	opacity: 0.1
+	
+.end-quote-mark
+	+position(absolute, null -7px 15px null)
+	+size(40px)
+	z-index: -1
+	opacity: 0.1
+	transform: rotate(180deg)
+
+.person-navigation
+	+position(absolute, 0px 0px 0px 0px)
+	z-index: 2
+
+	> div
+		margin-top: -20px 
+
+	.person-control-next
+		+position(absolute, 40% 10px null null)
+		opacity: 0.5
+		cursor: pointer
+
+	.person-control-prev
+		+position(absolute, 40% null null 10px)		
+		opacity: 0.5
+		cursor: pointer
+
+		&:hover .person-control-prev, .person-control-next
+			opacity: 0.8
+
+// Mobile navigation for testimonials styling
+.person-mobile-nav
+	text-align: center
+	display: none
+
+	span
+		cursor: pointer
+		display: inline-block
+		+size(16px)
+		border-radius: 50%
+		border: solid 2px $circles
+		margin: 0px 10px
+
+		&.active-person
+			border-color: $accent
+
+@media (max-width: 870px)
+	.person-unit	
+		max-width: 550px
+		padding: 0px 60px 0px 20px
+
+@media (max-width: 719px)
+	.testimonials
+		padding-bottom: 20px
+
+		h3
+			padding-bottom: 20px
+
+	.person-navigation
+		display: none
+
+	.testimonials-belt
+		margin: 0 auto
+
+		.person-unit.active-person
+			display: block
+			position: relative
+			left: auto
+			padding: 0
+
+		.person-face
+			margin: 20px auto 30px
+
+		.person-content
+			padding: 0px 30px
+			max-width: 400px
+			margin: 0 auto
+
+		.quote-mark
+			left: 20px
+
+		.end-quote-mark
+			+position(absolute, null -7px 0px null)
+
+	.person-logos
+		display: none
+
+	.person-mobile-nav
+		display: block
+
+@media (max-width: 500px)
+	.end-quote-mark
+		margin-right: 25px

@@ -1,0 +1,152 @@
+// Work section styling
+.alt-section
+	background: $bgcolor
+	box-shadow: 0px 0px 15px 2px rgba(118,119,119,0.15)
+
+.section-work
+	overflow-x: hidden
+	padding-bottom: 0px
+
+.work-belt
+	width: 200%
+	position: relative
+	left: 0%
+	+transition(all 0.8s)
+
+.thumb-wrap, .work-wrap
+	width: 50%
+	float: left
+
+.thumb-container
+	max-width: 600px
+	margin: 0px auto
+	padding: 0 10px 100px
+	+clearfix
+
+	@media screen and (max-width: 650px)
+		padding: 0 20px 100px
+
+	@media screen and (max-width: 400px)
+		padding: 0 20px 60px
+		
+	.thumb-unit
+		display: block
+		width: 33.33%
+		float: left
+		position: relative
+		padding-top: 25%
+		overflow: hidden
+		cursor: pointer
+		transform: translateX(300px)
+		transition: all 0.6s ease-in-out
+		opacity: 0
+
+	.thumb-unit
+		background: 
+			size: cover
+			position: center center
+			repeat: no-repeat
+
+		.thumb-unit,
+		&.is-showing
+			opacity: 1
+			transform: translateX(0px)
+
+		@media screen and (max-width: 650px)
+			width: 50%
+
+		.thumb-overlay
+			+position(absolute, 100% 0px null 0px)
+			height: 100%
+			background: fade-out($accent, 0.1) 
+			text-align: center
+			+transition
+			+display(flex)
+			+align-items(center)
+			+justify-content(space-around)
+
+			strong
+				display: block
+				padding: 0px 20px
+				color: white
+				font-weight: 300
+				text-transform: uppercase
+				font-size: 24px
+				line-height: 1.2
+			
+			@media (max-width: 600px)
+				strong
+					font-size: 21px
+			
+			@media (max-width: 400px)
+				strong
+					font-size: 18px
+			
+			@media (max-width: 330px)
+				strong
+					font-size: 16px
+
+		&:hover .thumb-overlay
+			top: 0%		
+
+.work-container
+	max-width: 600px
+	margin: 0px auto
+	padding-bottom: 50px
+	position: relative
+	display: none
+	color: $pcolor
+
+
+	.project-load
+		img
+			max-width: 100%
+			height: auto
+			margin-bottom: 20px
+
+	.return
+		+size(40px)
+		cursor: pointer
+		opacity: 0.5
+		+position(absolute, null null null -60px)
+
+		&:hover
+			opacity: 0.7
+
+	.go-up
+		float: right
+		cursor: pointer
+		opacity: 0.5
+		padding: 20px 0
+		+size(40px)
+
+		&:hover
+			opacity: 0.7
+
+	.project-title
+		color: $accent
+		font-weight: 300
+		text-transform: uppercase
+		font-size: 24px
+		line-height: 40px
+		margin: 0
+		padding: 0 0 20px
+
+@media (max-width: 760px)
+	.work-container
+		
+		.return
+			left: 0px
+		
+		.project-title
+			margin-left: 55px
+
+		[class^='projectc']
+			padding: 0 15px
+
+@media (max-width: 620px)
+	.work-container
+		padding: 0 10px
+	
+		.return
+			left: 10px

@@ -1,0 +1,95 @@
+.face-lockup
+	max-width: 780px
+	text-align: center
+	display: block
+	margin: 0 auto
+	+display(flex)
+	+align-items(center)
+	+justify-content(space-around)
+
+	.face-img
+		+size(150px)
+		border-radius: 50%
+		background-position: center
+		background-size: 100% 100%
+		+order(3)
+
+	[class^='icon-']
+		+size(80px)
+		background: #F8F8F8
+		border-radius: 50%
+		svg
+			margin-top: 15px
+
+		&.icon-pencil
+			+order(1)
+		&.icon-organize
+			+order(2)
+		&.icon-web
+			+order(4)
+		&.icon-travel
+			+order(5)
+
+@media screen and (max-width: 650px)
+	.face-lockup
+		display: block
+		text-align: center
+
+		div
+			display: inline-block
+
+		.face-img
+			display: block
+			background-position: center center
+			background-repeat: no-repeat
+			margin: 0 auto 30px
+
+		[class^='icon-']
+			margin: 10px
+
+.blurb
+	max-width: 620px
+	padding: 15px
+	margin: 40px auto 50px
+	font-size: 24px
+	text-align: center
+	font-weight: 300
+	color: $pcolor
+
+.skill-lockup
+	max-width: 600px
+	margin: 80px auto 0px
+	color: #999
+	+clearfix
+
+	.skill-unit
+		width: 250px
+		margin-left: 50px
+		float: left
+
+	.skill-icon
+		font-size: 0
+		margin: 0px 0 20px
+
+		span
+			display: inline-block
+			+size(14px)
+			background-color: $accent
+			margin-right: 5px
+			border-radius: 50%
+
+			&:after
+				content: ''
+				display: block
+				+size(10px)
+				background: #FFF
+				border-radius: 50%
+				margin: 2px
+
+		@for $i from 1 through 10
+			&.skill-#{$i} span:nth-child(n+#{$i+1})
+				background: $circles
+
+@media screen and (max-width: 620px)
+	.skill-lockup
+		width: 270px

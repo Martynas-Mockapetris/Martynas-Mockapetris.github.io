@@ -1,0 +1,129 @@
+header
+	background-position: center 60%
+	background-size: cover	
+	padding-bottom: 80px
+	position: relative
+	z-index: 9999
+
+	.logo
+		+size(40px)
+		margin: 10px 0 0 30px
+		float: left
+
+		path
+			fill: rgba(255,255,255,0.4)
+
+
+	nav
+		float: right
+		padding: 20px 30px 0 0
+
+		a
+			display: inline-block
+			padding: 0 3px 5px
+			margin-left: 17px
+			color: rgba(255,255,255,0.7)
+			border-bottom: 2px solid #725140
+			@extend %small-bold
+			+transition(0.5s)
+
+			&:hover, &:visited
+				color: $bgcolor
+				+transition(0.5s)
+	h1
+		text-align: center
+		font:
+			size: 72px
+			weight: 700
+		color: white
+		text-transform: uppercase
+		letter-spacing: 0.05em
+		margin-bottom: 15px
+		clear: both
+		padding-top: 80px
+
+		span
+			display: inline-block
+			padding: 0.3em 0.4em
+			border: white solid 10px
+
+	.kicker
+		text-align: center
+		@extend %small-bold
+		letter-spacing: 0.05em
+		color: white
+		line-height: 1
+
+@media (max-width: 600px)
+	header
+		.logo
+			position: absolute
+			margin: 10px 50% 10px 50%
+			left: -20px
+
+		nav
+			float: none
+			text-align: center
+			padding: 70px 0px 0px 0px
+
+			a
+				margin: 0px 5px
+
+		h1
+			padding-top: 0px
+
+/*=============================================*/
+/*=         Sticky Header Navigation          =*/
+/*=============================================*/
+.sticky
+	position: relative
+.container
+	z-index: 9998
+	background: white
+	box-shadow: 0px 0px 5px 2px rgba(118,119,119,0.25)
+	position: fixed
+	width: 100%
+	height: 40px
+	webkit-backface-visibility: hidden
+
+	.fixed
+		font-size: 14px
+		text-transform: uppercase
+		font-weight: 700
+		width: 50%
+		height: 40px
+		margin: 0 auto
+		+display(flex)
+		+align-items(center)
+		+justify-content(space-around)
+
+		a
+			border-bottom: 1px solid white
+			+transition(0.5s)
+			display: block
+
+		a:hover
+			border-bottom: 1px solid rgba(118,119,119,0.3)
+			color: $accent
+			opacity: 0.7
+			+transition(0.5s)	
+
+		a:visited, a:active
+			color: $accent
+
+	@media (max-width: 1400px)
+		.fixed
+			width: 40%
+	@media (max-width: 1000px)
+		.fixed
+			width: 60%
+	@media (max-width: 800px)
+		.fixed
+			width: 70%
+	@media (max-width: 700px)
+		.fixed
+			width: 80%
+	@media (max-width: 600px)
+		.fixed
+			width: 90%
+
